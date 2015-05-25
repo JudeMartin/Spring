@@ -1,6 +1,7 @@
 package com.tutorialspoint;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
@@ -11,6 +12,7 @@ public class MainApp {
       HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 
       obj.getMessage();
+      ((AbstractApplicationContext) context).registerShutdownHook();
  
       Employee emp1 = (Employee) context.getBean("employee");
       	emp1.setId(1);
@@ -45,6 +47,7 @@ public class MainApp {
     	admin2.getId();
     	admin2.getName();
    
-   
+    
+
    }
 }
