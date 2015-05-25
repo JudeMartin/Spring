@@ -29,5 +29,17 @@ public class MainApp {
     	emp3.getId();
     	emp3.getName();
    
+      Admin admin1 = (Admin) context.getBean("admin");
+    	admin1.setId(1234);
+    	admin1.setName("Root");
+    	
+    	admin1.getId();
+    	admin1.getName();
+   
+      Admin admin2 = (Admin) context.getBean("admin");
+    	admin2.getId();
+    	admin2.getName();
+   
+   
    }
 }
