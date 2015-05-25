@@ -20,7 +20,14 @@ public class MainApp {
       
       Employee emp2 = (Employee) context.getBean("employee");
       emp2.getId();
-      emp2.getName();	
+      emp2.getName();
+      
+
+      Employee emp3 = (Employee) context.getBean("employee");
+      	emp3.setId(2);
+    	emp3.setName("Aubrey");
+    	emp3.getId();
+    	emp3.getName();
    
    }
 }
