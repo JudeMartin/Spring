@@ -11,7 +11,7 @@
 	<bean id="employee" class="com.tutorialspoint.Employee" scope="prototype">
 	
 	</bean>
-	
+	<bean class="com.tutorialspoint.initHelloWorld" />
 	<bean id="admin" class="com.tutorialspoint.Admin" scope="singleton">
 	
 	</bean>
