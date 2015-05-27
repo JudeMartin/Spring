@@ -18,3 +18,7 @@ The BeanPostProcessor interface defines callback methods that you can implement 
 	public Object postProcessBeforeInitialization(Object bean, String beanName){
 		  //return bean obj;
 	}
+
+
+When we use XML-based configuration metadata, we indicate a child bean definition by using the parent attribute, specifying the parent bean as the value of this attribute.
+
