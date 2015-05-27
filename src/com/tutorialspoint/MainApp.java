@@ -9,7 +9,7 @@ public class MainApp {
       ApplicationContext context = 
              new ClassPathXmlApplicationContext("Beans.xml");
 
-      HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+     HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 
       obj.getMessage();
       ((AbstractApplicationContext) context).registerShutdownHook();
@@ -48,6 +48,18 @@ public class MainApp {
     	admin2.getName();
    
     
+      
+      Employee emp5 = (Employee) context.getBean("employee");
+    	//able to set the values from the XML file and we are calling the values using getter. 
+       // the code is not wrking for setter for the parent child property. 
+    	emp5.getId();
+    	emp5.getName();
+    	
+    Manager mgr = (Manager) context.getBean("manager");
+    //The Xml file has not values for the manager
+    // but using the parent keyword we are retrieving the values from the Employee. 
+      mgr.getId();
+      mgr.getName();
 
    }
 }

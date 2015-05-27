@@ -9,11 +9,15 @@
        <property name="message" value="Hello World!"/>
    	</bean>
 	<bean id="employee" class="com.tutorialspoint.Employee" scope="prototype">
-	
+		 <property name="name" value="Ramesh!"/>
+         <property name="id" value="1"/>	
 	</bean>
+	<bean id="manager" class="com.tutorialspoint.Manager" scope="prototype" parent="employee">
+         	 
+	</bean>
+	
 	<bean class="com.tutorialspoint.initHelloWorld" />
 	<bean id="admin" class="com.tutorialspoint.Admin" scope="singleton">
 	
 	</bean>
-	
 </beans>
